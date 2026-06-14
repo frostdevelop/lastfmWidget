@@ -1019,7 +1019,7 @@
     <button class="launch-btn" onclick="startOverlay()">Launch Overlay</button>
     <p id="error-msg"></p>
 
-	<footer class="config-footer">v1.0-dev<br/>© Frostbyte 2026 | AGPL-3.0</footer>
+	<footer class="config-footer">v1.0.0-dev<br/>© Frostbyte 2026 | AGPL-3.0</footer>
   </div>
 </div>
 
@@ -1079,7 +1079,7 @@ const SIZES = {
 		waveH: 50,
 		waveMin: 10,
 		gap: 15,
-		pad: '24px 28px 24px 15px'
+		pad: '22px 28px 22px 15px'
 	},
 };
 const POSITIONS = {
@@ -1243,7 +1243,7 @@ function updateUrlPreview() {
 	cfg.align && url.searchParams.set('align', cfg.align);
 	cfg.padding && url.searchParams.set('padding', cfg.padding);
 	window.history.pushState({}, '', url);
-	urlDisplay.innerHTML = `${url.href+url.pathname}?username=<span>${cfg.username || 'USERNAME'}</span>&amp;apikey=<span>${cfg.apiKey || 'API_KEY'}</span>&amp;glow=<span>${cfg.glow}</span>&amp;albumglow=<span>${cfg.albumGlow}</span>&amp;size=<span>${cfg.size}</span>&amp;align=<span>${cfg.align}</span>&amp;padding=<span>${cfg.padding || '32'}</span>`;
+	urlDisplay.innerHTML = `${window.location.href.split('?')[0]}?username=<span>${cfg.username || 'USERNAME'}</span>&amp;apikey=<span>${cfg.apiKey || 'API_KEY'}</span>&amp;glow=<span>${cfg.glow}</span>&amp;albumglow=<span>${cfg.albumGlow}</span>&amp;size=<span>${cfg.size}</span>&amp;align=<span>${cfg.align}</span>&amp;padding=<span>${cfg.padding || '32'}</span>`;
 }
 
 function applySettings() {
